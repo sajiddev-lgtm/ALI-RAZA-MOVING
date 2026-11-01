@@ -60,7 +60,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     ],
     basePriceOMR: 45,
     unit: 'starts from 45 OMR',
-    image: '/src/assets/images/residential_moving_1793515744246.jpg',
+    image: '/images/residential_moving_1793515744246.jpg',
   },
   {
     id: 'office_moving',
@@ -77,7 +77,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     ],
     basePriceOMR: 75,
     unit: 'starts from 75 OMR',
-    image: '/src/assets/images/commercial_office_1793515744170.jpg',
+    image: '/images/commercial_office_1793515744170.jpg',
   },
   {
     id: 'building_materials',
@@ -94,7 +94,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     ],
     basePriceOMR: 35,
     unit: 'per trip / supply order',
-    image: '/src/assets/images/storage_facility_1793515744751.jpg',
+    image: '/images/storage_facility_1793515744751.jpg',
   },
   {
     id: 'housewares_trade',
@@ -111,7 +111,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     ],
     basePriceOMR: 40,
     unit: 'bulk wholesale pricing',
-    image: '/src/assets/images/storage_facility_1793515744751.jpg',
+    image: '/images/storage_facility_1793515744751.jpg',
   },
   {
     id: 'waste_collection',
@@ -128,7 +128,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     ],
     basePriceOMR: 30,
     unit: 'per load / dump trip',
-    image: '/src/assets/images/moving_truck_crew_1793515743600.jpg',
+    image: '/images/moving_truck_crew_1793515743600.jpg',
   },
   {
     id: 'contracting_support',
@@ -145,7 +145,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     ],
     basePriceOMR: 50,
     unit: 'daily rate / contract basis',
-    image: '/src/assets/images/moving_truck_crew_1793515743600.jpg',
+    image: '/images/moving_truck_crew_1793515743600.jpg',
   },
 ];
 

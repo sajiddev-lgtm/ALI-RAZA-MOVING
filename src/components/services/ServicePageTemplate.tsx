@@ -16,6 +16,7 @@ import { ServiceItem, SERVICES_CATALOG } from '../../data/servicesData';
 import { SEO, getOrganizationSchema } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { CtaSection } from '../common/CtaSection';
+import { SafeImage } from '../common/SafeImage';
 
 interface ServicePageTemplateProps {
   service: ServiceItem;
@@ -136,10 +137,11 @@ export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ servic
 
               <div className="lg:col-span-5">
                 <div className="relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-900 aspect-16/10 lg:aspect-4/3">
-                  <img
+                  <SafeImage
                     src={service.heroImage}
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    fallbackCategory="moving"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-xs font-semibold text-slate-200">

@@ -174,10 +174,10 @@ export const Hero: React.FC<HeroProps> = ({ onQuickStartQuote, onNavigateToBooki
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 aspect-16/10 lg:aspect-auto lg:h-full min-h-[340px] shadow-sm">
               <img
-                src="/src/assets/images/moving_truck_crew_1793515743600.jpg"
+                src="/images/moving_truck_crew_1793515743600.jpg"
                 alt="Vanguard moving crew loading pristine furniture into clean moving truck"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+                loading="lazy"
               />
               {/* Subtle contrast scrim at bottom for photo caption */}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 text-white">

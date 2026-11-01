@@ -20,7 +20,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'residential-moving',
     title: 'Residential Moving',
     tagline: 'Reliable, white-glove household relocation for apartments, duplexes, and luxury villas.',
-    heroImage: '/src/assets/images/residential_moving_1793515744246.jpg',
+    heroImage: '/images/residential_moving_1793515744246.jpg',
     shortDesc:
       'Full-service home moving tailored to protect your furniture, electronics, and memories across Muscat and the Sultanate.',
     overview:
@@ -94,7 +94,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'commercial-moving',
     title: 'Commercial Moving',
     tagline: 'Streamlined commercial relocation engineered to protect inventory and eliminate operational downtime.',
-    heroImage: '/src/assets/images/commercial_office_1793515744170.jpg',
+    heroImage: '/images/commercial_office_1793515744170.jpg',
     shortDesc:
       'Corporate, retail, and industrial shifting managed by commercial transport specialists with formal VAT documentation.',
     overview:
@@ -168,7 +168,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'international-moving',
     title: 'International Moving',
     tagline: 'Reliable cross-border overland freight and international relocations between Oman, the GCC, and beyond.',
-    heroImage: '/src/assets/images/moving_truck_crew_1793515743600.jpg',
+    heroImage: '/images/moving_truck_crew_1793515743600.jpg',
     shortDesc:
       'Structured international moves between the Sultanate of Oman and UAE, Saudi Arabia, Qatar, Bahrain, and global hubs.',
     overview:
@@ -242,7 +242,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'office-relocation',
     title: 'Office Relocation',
     tagline: 'Zero-disruption workplace relocation with specialized IT computer carts and modular workstation assembly.',
-    heroImage: '/src/assets/images/commercial_office_1793515744170.jpg',
+    heroImage: '/images/commercial_office_1793515744170.jpg',
     shortDesc:
       'Turnkey office moving for tech firms, law practices, clinics, and financial institutions in Muscat business centers.',
     overview:
@@ -316,7 +316,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'furniture-moving',
     title: 'Furniture Moving',
     tagline: 'Expert furniture moving, heavy piece rigging, and carpenter disassembly for homes and offices.',
-    heroImage: '/src/assets/images/residential_moving_1793515744246.jpg',
+    heroImage: '/images/residential_moving_1793515744246.jpg',
     shortDesc:
       'Dedicated handling for solid wood wardrobes, sectional sofas, marble dining tables, and delicate antiques.',
     overview:
@@ -390,7 +390,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'packing-unpacking',
     title: 'Packing & Unpacking Services',
     tagline: 'Professional packing supplies, fragile dishpacks, and complete unpacking services.',
-    heroImage: '/src/assets/images/storage_facility_1793515744751.jpg',
+    heroImage: '/images/storage_facility_1793515744751.jpg',
     shortDesc:
       'Save dozens of hours with our skilled packers using premium 5-ply cartons, bubble wrap, and tissue paper.',
     overview:
@@ -464,7 +464,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'loading-unloading',
     title: 'Loading & Unloading',
     tagline: 'Professional heavy-lifting labor crews equipped with dollies, ramps, and safety gear.',
-    heroImage: '/src/assets/images/moving_truck_crew_1793515743600.jpg',
+    heroImage: '/images/moving_truck_crew_1793515743600.jpg',
     shortDesc:
       'Reliable labor for rental trucks, shipping containers, pods, or internal villa room rearrangements.',
     overview:
@@ -538,7 +538,7 @@ export const SERVICES_CATALOG: ServiceItem[] = [
     slug: 'transportation-logistics',
     title: 'Transportation & Logistics',
     tagline: 'Dedicated commercial freight, covered transport fleet, and GCC supply chain distribution.',
-    heroImage: '/src/assets/images/storage_facility_1793515744751.jpg',
+    heroImage: '/images/storage_facility_1793515744751.jpg',
     shortDesc:
       'Licensed freight transport across all governorates of Oman, construction site deliveries, and cross-border trucking.',
     overview:

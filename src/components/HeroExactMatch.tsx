@@ -111,87 +111,108 @@ export const HeroExactMatch: React.FC<HeroExactMatchProps> = ({ onOpenBookingMod
               Licensed, fully insured, and background-checked moving specialists. We pack, load, and deliver your belongings with white-glove care and zero hidden fees.
             </p>
 
-            {/* 4 Checkmark List in 2 columns with orange circular checks */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-6 pt-1 text-sm font-semibold text-slate-200">
-              <div className="flex items-center gap-2.5">
-                <span className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/20">
+            {/* 4 Trust Benefits Checkmark List in 2 columns with orange/amber checks */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-6 pt-2 text-sm font-semibold">
+              <div className="flex items-center gap-2.5 group">
+                <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/25">
                   <Check className="w-3.5 h-3.5 text-white stroke-[3]" />
                 </span>
-                <span>Guaranteed On-Time Delivery</span>
+                <span className="text-slate-900 dark:text-slate-100 font-semibold text-sm tracking-tight">
+                  Guaranteed On-Time Delivery
+                </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <span className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/20">
+              <div className="flex items-center gap-2.5 group">
+                <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/25">
                   <Check className="w-3.5 h-3.5 text-white stroke-[3]" />
                 </span>
-                <span>Free Packing Materials Offer</span>
+                <span className="text-slate-900 dark:text-slate-100 font-semibold text-sm tracking-tight">
+                  Free Packing Materials Offer
+                </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <span className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/20">
+              <div className="flex items-center gap-2.5 group">
+                <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/25">
                   <Check className="w-3.5 h-3.5 text-white stroke-[3]" />
                 </span>
-                <span>Full Valuation Protection</span>
+                <span className="text-slate-900 dark:text-slate-100 font-semibold text-sm tracking-tight">
+                  Full Valuation Protection
+                </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <span className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/20">
+              <div className="flex items-center gap-2.5 group">
+                <span className="w-5 h-5 rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-sm shadow-orange-500/25">
                   <Check className="w-3.5 h-3.5 text-white stroke-[3]" />
                 </span>
-                <span>Transparent Flat-Rate Pricing</span>
+                <span className="text-slate-900 dark:text-slate-100 font-semibold text-sm tracking-tight">
+                  Transparent Flat-Rate Pricing
+                </span>
               </div>
             </div>
 
             {/* Social Proof & Trust Strip */}
-            <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-8">
+            <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-6 sm:gap-8">
               {/* Avatar Stack + Ratings */}
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
                   <img
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80"
-                    alt="Customer"
-                    className="w-10 h-10 rounded-full border-2 border-slate-900 object-cover"
+                    alt="Customer verified review"
+                    className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover shadow-xs"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="%230F172A"/><circle cx="20" cy="16" r="7" fill="%23EAB308"/><path d="M9 34c0-6 5-10 11-10s11 4 11 10" fill="%23EAB308"/></svg>';
+                    }}
                   />
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80"
-                    alt="Customer"
-                    className="w-10 h-10 rounded-full border-2 border-slate-900 object-cover"
+                    alt="Customer verified review"
+                    className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover shadow-xs"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="%231E293B"/><circle cx="20" cy="16" r="7" fill="%23F59E0B"/><path d="M9 34c0-6 5-10 11-10s11 4 11 10" fill="%23F59E0B"/></svg>';
+                    }}
                   />
                   <img
                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80"
-                    alt="Customer"
-                    className="w-10 h-10 rounded-full border-2 border-slate-900 object-cover"
+                    alt="Customer verified review"
+                    className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover shadow-xs"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src =
+                        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="%23334155"/><circle cx="20" cy="16" r="7" fill="%23FBBF24"/><path d="M9 34c0-6 5-10 11-10s11 4 11 10" fill="%23FBBF24"/></svg>';
+                    }}
                   />
-                  <div className="w-10 h-10 rounded-full border-2 border-slate-900 bg-orange-500 text-white font-extrabold text-xs flex items-center justify-center font-mono">
+                  <div className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 bg-gradient-to-tr from-amber-500 to-orange-500 text-white font-extrabold text-xs flex items-center justify-center font-mono shadow-xs">
                     +2k
                   </div>
                 </div>
 
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <div className="flex text-amber-400">
+                    <div className="flex text-amber-500">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 stroke-none" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-500 stroke-none" />
                       ))}
                     </div>
-                    <span className="text-white font-black text-sm">4.9/5</span>
+                    <span className="text-slate-900 dark:text-white font-black text-sm tracking-tight">4.9/5</span>
                   </div>
-                  <div className="text-xs text-slate-400 font-medium">
+                  <div className="text-xs text-slate-600 dark:text-slate-400 font-medium">
                     From 3,400+ Verified Reviews
                   </div>
                 </div>
               </div>
 
-              {/* Insured Status */}
-              <div className="flex items-center gap-2.5 pl-4 border-l border-slate-800">
-                <div className="w-9 h-9 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                  <ShieldCheck className="w-5 h-5 text-emerald-400" />
+              {/* Insured Status & MOCIIP Registration */}
+              <div className="flex items-center gap-2.5 pl-0 sm:pl-4 border-l-0 sm:border-l border-slate-200 dark:border-slate-800">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white uppercase tracking-wider">
-                    100% Insured
+                  <div className="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+                    <span>100% Insured</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
                   </div>
-                  <div className="text-[11px] text-slate-400 font-mono">
+                  <div className="text-[11px] text-slate-600 dark:text-slate-400 font-mono font-medium">
                     MOCIIP CR: {COMPANY_PROFILE.crNumber}
                   </div>
                 </div>

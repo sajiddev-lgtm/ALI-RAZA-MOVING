@@ -18,6 +18,7 @@ import { SEO, getOrganizationSchema } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { SERVICES_CATALOG } from '../data/servicesData';
 import { CtaSection } from '../components/common/CtaSection';
+import { SafeImage } from '../components/common/SafeImage';
 
 export const ServicesIndexPage: React.FC = () => {
   return (
@@ -76,11 +77,11 @@ export const ServicesIndexPage: React.FC = () => {
                   <div>
                     {/* Image */}
                     <div className="relative aspect-16/9 w-full overflow-hidden bg-slate-950 border-b border-slate-800">
-                      <img
+                      <SafeImage
                         src={svc.heroImage}
                         alt={svc.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
+                        fallbackCategory="moving"
                       />
                       <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-xs text-orange-400 font-mono text-xs font-bold px-3 py-1 rounded-lg border border-slate-700">
                         Division 0{idx + 1}

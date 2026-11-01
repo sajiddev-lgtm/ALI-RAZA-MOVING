@@ -25,6 +25,7 @@ import { SERVICES_CATALOG } from '../data/servicesData';
 import { FAQS_CATALOG } from '../data/faqData';
 import { COMPANY_STATS } from '../data/companyStats';
 import { CtaSection } from '../components/common/CtaSection';
+import { SafeImage } from '../components/common/SafeImage';
 import { useLanguage } from '../context/LanguageContext';
 
 export const HomePage: React.FC = () => {
@@ -156,11 +157,11 @@ export const HomePage: React.FC = () => {
                 >
                   <div>
                     <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-950 border-b border-slate-200 dark:border-slate-800">
-                      <img
+                      <SafeImage
                         src={svc.heroImage}
                         alt={svc.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
+                        fallbackCategory="moving"
                       />
                       <div className="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-sm text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded-md border border-slate-700">
                         {language === 'ar' ? 'معتمد رسمياً' : 'Official Division'}

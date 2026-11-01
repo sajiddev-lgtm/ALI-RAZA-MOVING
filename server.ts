@@ -11,6 +11,7 @@ const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 // Persistent storage path for pricing and stats
 const DATA_DIR = path.resolve(__dirname, 'data');

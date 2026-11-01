@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Check, Phone, ShieldCheck, Box, Truck, Building2, Trash2, Hammer } from 'lucide-react';
 import { CORE_SERVICES, ServiceDetail, COMPANY_PROFILE } from '../data/omanData';
+import { SafeImage } from './common/SafeImage';
 
 interface OmanServicesGridProps {
   onSelectServiceForQuote: (serviceId: string) => void;
@@ -43,11 +44,11 @@ export const OmanServicesGrid: React.FC<OmanServicesGridProps> = ({
               <div>
                 {/* Service Card Image */}
                 <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-950 border-b border-slate-800">
-                  <img
+                  <SafeImage
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
+                    fallbackCategory="moving"
                   />
                   <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-xs text-orange-400 font-mono text-xs font-bold px-2.5 py-1 rounded-md border border-slate-700">
                     {service.code}

@@ -56,7 +56,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             </div>
             <div className="relative aspect-16/9 w-full overflow-hidden bg-neutral-200 border-t border-neutral-200">
               <img
-                src="/src/assets/images/residential_moving_1793515744246.jpg"
+                src="/images/residential_moving_1793515744246.jpg"
                 alt="Residential moving boxes and padded sofa in a modern sunlit apartment"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
@@ -94,7 +94,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             </div>
             <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-200 border-t border-neutral-200">
               <img
-                src="/src/assets/images/commercial_office_1793515744170.jpg"
+                src="/images/commercial_office_1793515744170.jpg"
                 alt="Movers transporting padded office desks and computer monitors in glass hallway"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
@@ -130,7 +130,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             </div>
             <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-200 border-t border-neutral-200">
               <img
-                src="/src/assets/images/storage_facility_1793515744751.jpg"
+                src="/images/storage_facility_1793515744751.jpg"
                 alt="Organized climate controlled storage corridors with polished concrete floors"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"

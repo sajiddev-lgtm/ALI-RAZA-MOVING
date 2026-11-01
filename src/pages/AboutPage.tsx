@@ -17,6 +17,7 @@ import {
 import { SEO, getOrganizationSchema } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { CtaSection } from '../components/common/CtaSection';
+import { SafeImage } from '../components/common/SafeImage';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -73,10 +74,11 @@ export const AboutPage: React.FC = () => {
 
               <div className="lg:col-span-5">
                 <div className="relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-900 aspect-4/3">
-                  <img
-                    src="/src/assets/images/moving_truck_crew_1793515743600.jpg"
+                  <SafeImage
+                    src="/images/moving_truck_crew_1793515743600.jpg"
                     alt="ALI RAZA moving crew and commercial truck in Oman"
                     className="w-full h-full object-cover"
+                    fallbackCategory="truck"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-xs font-medium text-slate-200">

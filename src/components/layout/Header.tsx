@@ -19,6 +19,7 @@ import { SERVICES_CATALOG } from '../../data/servicesData';
 import { PromoTopBanner } from '../PromoTopBanner';
 import { ThemeSwitcher } from '../common/ThemeSwitcher';
 import { LanguageSelector } from '../common/LanguageSelector';
+import { BrandLogo } from '../common/BrandLogo';
 import { useLanguage } from '../../context/LanguageContext';
 
 export const Header: React.FC = () => {
@@ -110,21 +111,8 @@ export const Header: React.FC = () => {
       {/* 3. Main Navigation Bar */}
       <div className="bg-white/95 dark:bg-[#070D1E]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
-          {/* Logo & Brand Lockup */}
-          <Link to="/" className="flex items-center gap-3 shrink-0 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white font-black shadow-md shadow-orange-500/20 shrink-0">
-              <Truck className="w-5 h-5 text-white" />
-            </div>
-            <div className="text-left">
-              <div className="text-xs sm:text-sm md:text-base font-black text-slate-900 dark:text-white tracking-tight group-hover:text-orange-600 dark:group-hover:text-amber-400 transition-colors leading-tight">
-                ALI RAZA INTERNATIONAL TRADE <span className="text-[10px] text-orange-600 dark:text-orange-400 font-extrabold uppercase">SPS</span>
-              </div>
-              <div className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-medium tracking-wide flex items-center gap-1.5">
-                <span className="text-orange-600 dark:text-amber-400 font-bold">OAN</span>
-                <span>{language === 'ar' ? 'خدمات نقل الأثاث والشحن · مسقط' : 'Moving & Logistics Services · Muscat'}</span>
-              </div>
-            </div>
-          </Link>
+          {/* Compact Brand Monogram Logo */}
+          <BrandLogo />
 
           {/* Desktop Navigation Links */}
           <nav className="hidden xl:flex items-center gap-1 text-xs sm:text-sm">
