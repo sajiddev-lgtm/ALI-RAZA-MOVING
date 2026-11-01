@@ -43,7 +43,7 @@ export const ServicesIndexPage: React.FC = () => {
       />
 
       <div className="bg-[#070D1E] text-slate-100">
-        <Breadcrumbs items={[{ label: 'Our Services' }]} />
+        <Breadcrumbs items={[{ label: 'Services' }]} />
 
         {/* Hero Section */}
         <section className="relative py-14 lg:py-20 border-b border-slate-800 text-left overflow-hidden">

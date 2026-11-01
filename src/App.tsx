@@ -162,6 +162,9 @@ export default function App() {
                 <Route path="/our-process" element={<OurProcessPage />} />
                 <Route path="/en/our-process" element={<OurProcessPage />} />
                 <Route path="/ar/our-process" element={<OurProcessPage />} />
+                <Route path="/process" element={<OurProcessPage />} />
+                <Route path="/en/process" element={<OurProcessPage />} />
+                <Route path="/ar/process" element={<OurProcessPage />} />
 
                 {/* 15. Customer Testimonials */}
                 <Route path="/testimonials" element={<TestimonialsPage />} />

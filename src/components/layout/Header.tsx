@@ -5,11 +5,9 @@ import {
   X,
   ChevronDown,
   Phone,
-  Mail,
   MapPin,
   ShieldCheck,
   MessageCircle,
-  Truck,
   ArrowRight,
   Calculator,
   Star,
@@ -24,23 +22,33 @@ import { useLanguage } from '../../context/LanguageContext';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileAboutExpanded, setMobileAboutExpanded] = useState(false);
   const [mobileServicesExpanded, setMobileServicesExpanded] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const aboutDropdownRef = useRef<HTMLDivElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const { language, isRTL, t } = useLanguage();
 
   // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setAboutDropdownOpen(false);
     setServicesDropdownOpen(false);
+    setMobileAboutExpanded(false);
     setMobileServicesExpanded(false);
   }, [location.pathname]);
 
-  // Click outside to close desktop dropdown
+  // Click outside to close desktop dropdowns
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      if (aboutDropdownRef.current && !aboutDropdownRef.current.contains(target)) {
+        setAboutDropdownOpen(false);
+      }
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(target)) {
         setServicesDropdownOpen(false);
       }
     };
@@ -61,6 +69,15 @@ export const Header: React.FC = () => {
         ? 'bg-orange-500/10 text-orange-600 dark:bg-amber-400/10 dark:text-amber-400 font-extrabold'
         : 'text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800'
     }`;
+
+  const isAboutActive =
+    location.pathname === '/about' ||
+    location.pathname === '/en/about' ||
+    location.pathname === '/ar/about' ||
+    location.pathname === '/our-process' ||
+    location.pathname === '/en/our-process' ||
+    location.pathname === '/ar/our-process' ||
+    location.pathname === '/process';
 
   return (
     <header className="sticky top-0 z-40 w-full shadow-md">
@@ -111,7 +128,7 @@ export const Header: React.FC = () => {
       {/* 3. Main Navigation Bar */}
       <div className="bg-white/95 dark:bg-[#070D1E]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
-          {/* Compact Brand Monogram Logo */}
+          {/* Header Brand Logo (Exact Ali Raza International Trade logo) */}
           <BrandLogo />
 
           {/* Desktop Navigation Links */}
@@ -120,15 +137,121 @@ export const Header: React.FC = () => {
               {t('navHome', 'Home')}
             </NavLink>
 
-            <NavLink to="/about" className={navLinkClass}>
-              {t('navAbout', 'About Us')}
-            </NavLink>
+            {/* About Us Dropdown (Includes About Us & Our Process) */}
+            <div
+              className="relative"
+              ref={aboutDropdownRef}
+              onMouseEnter={() => setAboutDropdownOpen(true)}
+              onMouseLeave={() => setAboutDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setAboutDropdownOpen(!aboutDropdownOpen);
+                  } else if (e.key === 'Escape') {
+                    setAboutDropdownOpen(false);
+                  }
+                }}
+                aria-expanded={aboutDropdownOpen}
+                aria-haspopup="true"
+                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                  isAboutActive
+                    ? 'text-orange-600 bg-orange-500/10 dark:text-amber-400 dark:bg-slate-800/80 shadow-sm'
+                    : 'text-slate-700 hover:text-orange-600 hover:bg-slate-100 dark:text-slate-200 dark:hover:text-amber-400 dark:hover:bg-slate-800/40'
+                }`}
+              >
+                <span>{t('navAbout', 'About Us')}</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    aboutDropdownOpen ? 'rotate-180 text-orange-600 dark:text-amber-400' : 'text-slate-400'
+                  }`}
+                />
+              </button>
 
-            {/* Services Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+              {aboutDropdownOpen && (
+                <div
+                  role="menu"
+                  className={`absolute top-full mt-2 w-64 bg-white dark:bg-[#0B132B] border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150 ${
+                    isRTL ? 'right-0' : 'left-0'
+                  }`}
+                >
+                  <div className="text-[11px] font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider px-3 py-1.5 border-b border-slate-100 dark:border-slate-800">
+                    {language === 'ar' ? 'عن الشركة' : 'Company Overview'}
+                  </div>
+                  <div className="py-1 space-y-0.5">
+                    <NavLink
+                      to="/about"
+                      role="menuitem"
+                      onClick={() => setAboutDropdownOpen(false)}
+                      className={({ isActive }) =>
+                        `flex items-start gap-2.5 px-3 py-2 rounded-xl text-xs transition-colors ${
+                          isActive
+                            ? 'bg-orange-500/10 text-orange-600 dark:bg-amber-400/10 dark:text-amber-400 font-bold'
+                            : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/90 hover:text-orange-600 dark:hover:text-amber-400'
+                        }`
+                      }
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 shrink-0" />
+                      <div>
+                        <div className="font-bold text-slate-900 dark:text-slate-100">
+                          {t('navAbout', 'About Us')}
+                        </div>
+                        <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                          {language === 'ar' ? 'نبذة عن الشركة وسجلنا التجاري ورؤيتنا' : 'Company profile, MOCIIP license & values'}
+                        </div>
+                      </div>
+                    </NavLink>
+
+                    <NavLink
+                      to="/our-process"
+                      role="menuitem"
+                      onClick={() => setAboutDropdownOpen(false)}
+                      className={({ isActive }) =>
+                        `flex items-start gap-2.5 px-3 py-2 rounded-xl text-xs transition-colors ${
+                          isActive
+                            ? 'bg-orange-500/10 text-orange-600 dark:bg-amber-400/10 dark:text-amber-400 font-bold'
+                            : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/90 hover:text-orange-600 dark:hover:text-amber-400'
+                        }`
+                      }
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                      <div>
+                        <div className="font-bold text-slate-900 dark:text-slate-100">
+                          {t('navProcess', 'Our Process')}
+                        </div>
+                        <div className="text-[11px] text-slate-500 dark:text-slate-400">
+                          {language === 'ar' ? 'مراحل النقل المنظمة من الباب إلى الباب' : 'Step-by-step moving workflow'}
+                        </div>
+                      </div>
+                    </NavLink>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Services Dropdown (Renamed from 'Our Services' to 'Services') */}
+            <div
+              className="relative"
+              ref={servicesDropdownRef}
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
               <button
                 type="button"
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setServicesDropdownOpen(!servicesDropdownOpen);
+                  } else if (e.key === 'Escape') {
+                    setServicesDropdownOpen(false);
+                  }
+                }}
+                aria-expanded={servicesDropdownOpen}
+                aria-haspopup="true"
                 className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                   location.pathname.startsWith('/services')
                     ? 'text-orange-600 bg-orange-500/10 dark:text-amber-400 dark:bg-slate-800/80 shadow-sm'
@@ -145,6 +268,7 @@ export const Header: React.FC = () => {
 
               {servicesDropdownOpen && (
                 <div
+                  role="menu"
                   className={`absolute top-full mt-2 w-80 bg-white dark:bg-[#0B132B] border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150 ${
                     isRTL ? 'right-0' : 'left-0'
                   }`}
@@ -157,6 +281,8 @@ export const Header: React.FC = () => {
                       <Link
                         key={svc.slug}
                         to={`/services/${svc.slug}`}
+                        role="menuitem"
+                        onClick={() => setServicesDropdownOpen(false)}
                         className="flex items-start gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/90 hover:text-orange-600 dark:hover:text-amber-400 transition-colors"
                       >
                         <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 shrink-0" />
@@ -174,6 +300,7 @@ export const Header: React.FC = () => {
                   <div className="pt-2 border-t border-slate-100 dark:border-slate-800 px-3">
                     <Link
                       to="/services"
+                      onClick={() => setServicesDropdownOpen(false)}
                       className="text-xs font-bold text-orange-600 dark:text-amber-400 hover:underline flex items-center justify-between py-1"
                     >
                       <span>{language === 'ar' ? 'عرض كافة الخدمات (٨)' : 'Explore All 8 Services'}</span>
@@ -189,10 +316,6 @@ export const Header: React.FC = () => {
                 <Calculator className="w-3.5 h-3.5 text-orange-600 dark:text-amber-400" />
                 <span>{t('navCalculator', 'Cost Calculator')}</span>
               </span>
-            </NavLink>
-
-            <NavLink to="/our-process" className={navLinkClass}>
-              {t('navProcess', 'Our Process')}
             </NavLink>
 
             <NavLink to="/testimonials" className={navLinkClass}>
@@ -259,18 +382,41 @@ export const Header: React.FC = () => {
               {t('navHome', 'Home')}
             </NavLink>
 
-            <NavLink to="/about" className={mobileNavLinkClass}>
-              {t('navAbout', 'About Us')}
-            </NavLink>
+            {/* Mobile Expandable About Us (Includes About Us and Our Process) */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setMobileAboutExpanded(!mobileAboutExpanded)}
+                className="w-full flex items-center justify-between py-2.5 px-3 rounded-xl text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                <span>{t('navAbout', 'About Us')}</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    mobileAboutExpanded ? 'rotate-180 text-orange-600 dark:text-amber-400' : 'text-slate-400'
+                  }`}
+                />
+              </button>
 
-            {/* Mobile Expandable Services */}
+              {mobileAboutExpanded && (
+                <div className="pl-4 pr-2 py-1 space-y-1 border-l-2 border-orange-500/30 my-1">
+                  <NavLink to="/about" className={mobileNavLinkClass}>
+                    {t('navAbout', 'About Us')}
+                  </NavLink>
+                  <NavLink to="/our-process" className={mobileNavLinkClass}>
+                    {t('navProcess', 'Our Process')}
+                  </NavLink>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Expandable Services (Renamed from 'Our Services' to 'Services') */}
             <div>
               <button
                 type="button"
                 onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}
                 className="w-full flex items-center justify-between py-2.5 px-3 rounded-xl text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
-                <span>{t('navServices', 'Our Services')}</span>
+                <span>{t('navServices', 'Services')}</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform ${
                     mobileServicesExpanded ? 'rotate-180 text-orange-600 dark:text-amber-400' : 'text-slate-400'
@@ -289,16 +435,18 @@ export const Header: React.FC = () => {
                       {language === 'ar' ? svc.titleAr || svc.title : svc.title}
                     </Link>
                   ))}
+                  <Link
+                    to="/services"
+                    className="block py-1.5 px-2 text-xs text-orange-600 dark:text-amber-400 font-bold hover:underline pt-2 border-t border-slate-100 dark:border-slate-800"
+                  >
+                    {language === 'ar' ? 'عرض كافة الخدمات (٨)' : 'Explore All Services'}
+                  </Link>
                 </div>
               )}
             </div>
 
             <NavLink to="/moving-cost-calculator" className={mobileNavLinkClass}>
               {t('navCalculator', 'Moving Cost Calculator')}
-            </NavLink>
-
-            <NavLink to="/our-process" className={mobileNavLinkClass}>
-              {t('navProcess', 'Our Process')}
             </NavLink>
 
             <NavLink to="/testimonials" className={mobileNavLinkClass}>

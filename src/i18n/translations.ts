@@ -87,8 +87,8 @@ export const TRANSLATIONS: TranslationDictionary = {
     ar: 'من نحن',
   },
   navServices: {
-    en: 'Our Services',
-    ar: 'خدماتنا',
+    en: 'Services',
+    ar: 'الخدمات',
   },
   navCalculator: {
     en: 'Cost Calculator',

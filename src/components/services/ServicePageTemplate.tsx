@@ -75,7 +75,7 @@ export const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ servic
       <div className="bg-[#070D1E] text-slate-100 text-left">
         <Breadcrumbs
           items={[
-            { label: 'Our Services', path: '/services' },
+            { label: 'Services', path: '/services' },
             { label: service.title },
           ]}
         />
