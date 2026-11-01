@@ -1,0 +1,1030 @@
+# ALI RAZA INTERNATIONAL TRADE SPS — COMPLETE WEBSITE UPGRADE MASTER PROMPT
+
+I want you to perform a comprehensive upgrade of my existing ALI RAZA INTERNATIONAL TRADE SPS website.
+
+This is an existing, working, multi-page moving and logistics website. Your task is to enhance it into a premium, international-standard, multilingual moving and logistics platform.
+
+IMPORTANT: DO NOT rebuild the website from scratch. Work directly on the existing project and inspect the existing source code, framework, routing, components, backend, and integrations before making modifications.
+
+Preserve all existing working pages, functionality, branding, animations, forms, SEO, calculator, and integrations.
+
+Implement ALL the following requirements together.
+
+==================================================
+1. COMPLETE LIGHT MODE + DARK MODE SYSTEM
+==================================================
+
+Currently, the website has a dark theme. I want a complete, professionally designed light theme alongside the existing dark theme.
+
+DEFAULT THEME:
+- First-time visitors must see LIGHT MODE.
+- Do not automatically use the operating system's dark theme.
+- If a visitor has previously selected a theme manually, restore that preference.
+- Save the selection using localStorage.
+
+THEME SWITCHER:
+Add a premium theme switcher in the main header.
+
+Include:
+- Sun icon for Light Mode.
+- Moon icon for Dark Mode.
+- Smooth animated transition.
+- Elegant hover effects.
+- Active theme indication.
+- Responsive placement on mobile.
+
+LIGHT MODE DESIGN:
+- Clean white and warm off-white backgrounds.
+- Midnight navy typography.
+- Champagne gold accents.
+- Elegant neutral surfaces.
+- Premium shadows.
+- Subtle borders.
+- Excellent contrast and readability.
+
+DARK MODE DESIGN:
+- Deep midnight navy backgrounds.
+- Champagne gold highlights.
+- Premium dark surfaces.
+- Subtle glowing effects.
+- Cinematic visual presentation.
+
+Both themes must be fully implemented across every page and component, including forms, buttons, navigation, calculator, dashboard, testimonials, footer, dropdowns, and modals.
+
+Avoid theme flickering during page load.
+
+==================================================
+2. AUTOMATIC ANIMATED HERO HEADLINE
+==================================================
+
+Replace the current static hero heading with an elegant, automatically changing typewriter headline.
+
+Use these phrases:
+
+1. Moving Your World, One Journey at a Time.
+2. Your Trusted Partner in Relocation.
+3. Every Move Deserves Expert Care.
+4. Moving Made Simple. Moving Made Better.
+5. From Your Doorstep to Your Destination.
+6. Reliable Moving. Seamless Journeys.
+7. Your Journey Begins With Us.
+
+ANIMATION BEHAVIOR:
+- Type the first sentence character by character.
+- Pause when the sentence is complete.
+- Erase it smoothly.
+- Automatically type the next sentence.
+- Pause again.
+- Erase and continue.
+- Repeat infinitely.
+
+VISUAL REQUIREMENTS:
+- Premium typography.
+- Elegant blinking cursor.
+- Smooth typing and erasing.
+- No layout shifts.
+- Responsive font sizing.
+- Stable subtitle and CTA buttons.
+- No excessive animation.
+
+Respect prefers-reduced-motion accessibility settings.
+
+All phrases must relate to moving, relocation, transportation, and logistics.
+
+==================================================
+3. ANIMATED FLOATING WHATSAPP BUTTON
+==================================================
+
+Company WhatsApp:
++968 9838 6824
+
+WhatsApp URL:
+https://wa.me/96898386824
+
+Create a premium floating WhatsApp button on EVERY page.
+
+Features:
+- Official WhatsApp icon.
+- Elegant circular design.
+- Green WhatsApp color.
+- Gentle floating animation.
+- Subtle pulsing outer ring.
+- Soft glow.
+- Smooth hover scaling.
+- Tooltip: "Chat with us".
+- Responsive positioning.
+- Remain visible while scrolling.
+
+Clicking the button must open the correct WhatsApp conversation.
+
+Use an optional professional introductory message.
+
+Ensure the button does not overlap mobile navigation, forms, or important content.
+
+==================================================
+4. TESTIMONIALS PAGE
+==================================================
+
+Create a dedicated page:
+
+Route: /testimonials
+
+Page title: Customer Testimonials
+
+Hero headline:
+"Trusted by Customers. Driven by Every Journey."
+
+Supporting text:
+"Discover the experiences of customers who have chosen ALI RAZA INTERNATIONAL TRADE SPS for their moving and relocation needs."
+
+CUSTOMER STATISTICS:
+
+Display:
+
+2,067+ Customers in the Last 8 Months
+
+Use an elegant animated counter.
+
+Make the statistic configurable through the website's data configuration.
+
+IMPORTANT:
+Only publish this figure as a verified company achievement after confirmation. Do not invent additional company statistics.
+
+TESTIMONIAL CARDS:
+
+Each testimonial may contain:
+- Customer name, if authorized.
+- Genuine customer review.
+- Service category.
+- Location, if verified.
+- Genuine star rating.
+- Customer image, with permission.
+
+Create:
+- Three-column desktop layout.
+- Two-column tablet layout.
+- One-column mobile layout.
+- Elegant card animations.
+- Subtle hover effects.
+
+Do not create fake reviews, names, images, or ratings.
+
+Create a reusable testimonial data structure so genuine customer feedback can be added easily.
+
+If genuine reviews are unavailable, display an attractive invitation for customers to submit feedback.
+
+HOMEPAGE TESTIMONIAL CAROUSEL:
+
+Add a responsive carousel featuring genuine customer feedback.
+
+Include:
+- Automatic sliding.
+- Manual navigation arrows.
+- Pagination indicators.
+- Touch/swipe support.
+- Pause when visitors interact.
+
+Add a CTA at the bottom of the testimonials page:
+
+"Ready to Experience a Better Move?"
+
+Buttons:
+- Request a Free Quote.
+- Contact Us.
+- WhatsApp Us.
+
+==================================================
+5. ADMIN PRICE CONFIGURATION DASHBOARD
+==================================================
+
+Create a professional, secure administrator dashboard.
+
+Suggested route:
+/admin/pricing
+
+PURPOSE:
+
+Allow the company owner to manage all moving service prices without editing source code.
+
+IMPORTANT SECURITY REQUIREMENTS:
+- Use proper backend authentication.
+- Restrict pricing management to authorized administrators.
+- Use server-side authorization.
+- Never expose admin credentials in frontend code.
+- Do not rely on hiding the admin page as security.
+- Reuse existing authentication if available.
+- Use persistent database storage.
+- If the existing backend does not support authentication or persistence, identify and implement the required backend integration rather than pretending it works.
+
+A. DASHBOARD OVERVIEW
+
+Display:
+- Total configured services.
+- Last pricing update.
+- Active pricing rules.
+- Inactive pricing rules.
+- Pricing configuration status.
+- Save Changes.
+- Publish Changes.
+- Reset to Previous Saved Configuration.
+
+B. BASE PROPERTY PRICING
+
+Allow editing prices for:
+
+- Studio apartment.
+- 1-bedroom apartment.
+- 2-bedroom apartment.
+- 3-bedroom apartment.
+- 4+ bedroom house.
+- Villa.
+- Office.
+- Custom inventory.
+
+Each option should support:
+- Base moving price.
+- Minimum charge.
+- Additional labor charge.
+- Active/inactive toggle.
+
+C. DISTANCE PRICING
+
+Allow editing:
+- Base transportation fee.
+- Price per kilometer.
+- Minimum transportation fee.
+- Long-distance surcharge.
+- Route-specific prices.
+- International moving pricing rules.
+- Supported destination zones.
+
+International routes may require individual quotations and must not use invented universal rates.
+
+D. ADDITIONAL SERVICE PRICING
+
+Allow administrators to configure:
+
+- Packing services.
+- Unpacking services.
+- Furniture dismantling.
+- Furniture assembly.
+- Fragile item handling.
+- Loading and unloading.
+- Heavy furniture handling.
+- Storage services.
+- Additional boxes.
+- Extra labor.
+- Floor access charges.
+
+Pricing methods:
+- Fixed price.
+- Per item.
+- Per hour.
+- Per box.
+- Per worker.
+- Per kilometer.
+- Percentage surcharge.
+
+Each service should have:
+- Name.
+- Description.
+- Pricing method.
+- Price.
+- Active/inactive status.
+
+E. TAXES AND DISCOUNTS
+
+Allow configuration of:
+- Tax percentage.
+- Discount percentage.
+- Promotional discounts.
+- Minimum booking amount.
+- Additional service charges.
+
+Only apply applicable and configured taxes and fees.
+
+F. CURRENCY CONFIGURATION
+
+Primary currency:
+OMR — Omani Rial.
+
+Support:
+- OMR as default currency.
+- Configurable currency display.
+- Correct currency formatting.
+- Currency-specific pricing configurations.
+- Appropriate decimal precision.
+
+Never invent exchange rates. Additional currency conversion must use a verified exchange-rate source or clearly configured manual rates.
+
+G. SAVE AND PUBLISH SYSTEM
+
+Implement:
+- Configuration validation.
+- Persistent saving.
+- Draft pricing configuration.
+- Publish pricing configuration.
+- Last updated timestamp.
+- Success and error notifications.
+- Previous published configuration recovery.
+
+The customer-facing calculator must only use published pricing.
+
+Customers must never be able to modify company pricing.
+
+==================================================
+6. ADVANCED MOVING COST CALCULATOR
+==================================================
+
+Upgrade the existing moving cost calculator into a professional multi-step quotation application.
+
+Use a visual progress stepper.
+
+FIVE STEPS:
+
+STEP 1 — MOVING DETAILS
+
+Fields:
+- Moving from.
+- Moving to.
+- Moving date.
+- Moving category.
+- One-way or return transportation.
+- Residential, commercial, office, or international moving.
+
+STEP 2 — PROPERTY DETAILS
+
+Options:
+- Studio apartment.
+- 1-bedroom apartment.
+- 2-bedroom apartment.
+- 3-bedroom apartment.
+- 4+ bedroom house.
+- Villa.
+- Office.
+- Custom inventory.
+
+Additional information:
+- Number of bedrooms.
+- Approximate boxes.
+- Furniture quantity.
+- Inventory size.
+
+STEP 3 — SERVICES
+
+Allow selecting:
+- Packing.
+- Unpacking.
+- Furniture dismantling.
+- Furniture assembly.
+- Loading.
+- Unloading.
+- Fragile item handling.
+- Storage, if available.
+- Heavy furniture transportation.
+
+STEP 4 — ADDITIONAL INFORMATION
+
+Fields:
+- Floor number.
+- Elevator availability.
+- Access restrictions.
+- Additional workers.
+- Special handling requirements.
+- Additional notes.
+
+STEP 5 — PRICE ESTIMATE
+
+Display:
+- Base moving cost.
+- Transportation charges.
+- Labor charges.
+- Packing charges.
+- Additional service charges.
+- Applicable taxes.
+- Discounts.
+- Estimated total.
+
+VISUAL PROGRESS STEPPER:
+
+Desktop:
+- Horizontal progress stepper.
+
+Mobile:
+- Compact responsive progress indicator.
+
+Include:
+- Completed steps.
+- Current active step.
+- Upcoming steps.
+- Step numbers and icons.
+- Animated progress line.
+- Smooth step transitions.
+
+Allow customers to:
+- Return to previous steps.
+- Edit selections.
+- Continue without losing information.
+- See validation errors.
+- Complete the calculator on mobile.
+
+Do not allow progression when required fields are invalid.
+
+REAL-TIME PRICE CALCULATION:
+
+Connect the calculator directly to the admin pricing configuration.
+
+Use actual published pricing rules.
+
+Automatically update prices when selections change.
+
+Show a transparent itemized cost breakdown.
+
+If a route or service does not have a configured rate, display:
+
+"Custom quotation required."
+
+Never invent prices or present indicative estimates as guaranteed final quotations.
+
+QUOTE INTEGRATION:
+
+Add a button:
+
+"Request This Moving Quote"
+
+When clicked, transfer all calculator information into the existing quotation form, including:
+- Moving origin.
+- Destination.
+- Moving date.
+- Property type.
+- Selected services.
+- Additional requirements.
+- Cost breakdown.
+- Estimated total, if available.
+
+Preserve the information throughout the quotation process.
+
+==================================================
+7. AUTOMATIC LANGUAGE DETECTION + LANGUAGE SELECTOR
+==================================================
+
+Implement a complete multilingual system.
+
+Initially support:
+
+1. English (EN).
+2. Arabic (AR).
+
+Build the architecture so additional languages can be added later.
+
+A. AUTOMATIC LANGUAGE DETECTION
+
+When someone opens the website for the first time, detect their browser/device preferred language.
+
+Rules:
+
+If language is Arabic:
+- ar
+- ar-SA
+- ar-OM
+- ar-AE
+- ar-KW
+- ar-QA
+- Any other ar-* locale.
+
+Automatically open the Arabic website.
+
+If language is English:
+- en-US
+- en-GB
+- en-OM
+- Other English locales.
+
+Automatically open the English website.
+
+If language is unsupported, such as Urdu, open English by default.
+
+IMPORTANT LANGUAGE PRIORITY:
+
+1. Previously saved manual language selection.
+2. Browser/device preferred language.
+3. English fallback.
+
+Do not override a manually selected language on future visits.
+
+Persist language preference using localStorage.
+
+B. MANUAL LANGUAGE SELECTOR
+
+Add a premium language selector to the main header.
+
+Options:
+- English
+- العربية
+
+Display language names in their native scripts.
+
+Position the selector near the theme switcher.
+
+On mobile, include it inside the mobile navigation menu.
+
+Visitors must be able to switch languages at any time.
+
+C. LANGUAGE-AWARE URL ARCHITECTURE
+
+Preferred structure:
+
+English:
+ /en/
+ /en/about
+ /en/services
+ /en/moving-cost-calculator
+ /en/testimonials
+
+Arabic:
+ /ar/
+ /ar/about
+ /ar/services
+ /ar/moving-cost-calculator
+ /ar/testimonials
+
+Create corresponding translated routes for all other pages.
+
+IMPORTANT:
+Preserve existing indexed URLs and existing routes through compatible redirects or aliases. Do not break old bookmarks or indexed links.
+
+D. COMPLETE ARABIC TRANSLATION
+
+Translate every existing and newly created page.
+
+Include:
+- Homepage.
+- About Us.
+- All service pages.
+- Moving Cost Calculator.
+- FAQ.
+- Our Process.
+- Contact.
+- Request a Quote.
+- Testimonials.
+- Privacy Policy.
+- Terms & Conditions.
+- Pricing dashboard interface.
+- Form labels.
+- Validation messages.
+- Notifications.
+- Navigation.
+- Footer.
+- Buttons.
+- All supporting content.
+
+Use professional, natural Arabic suitable for customers in Oman and the Gulf region.
+
+Do not leave scattered English labels in the Arabic interface.
+
+Keep ALI RAZA INTERNATIONAL TRADE SPS as the official company name.
+
+E. COMPLETE RIGHT-TO-LEFT SUPPORT
+
+When Arabic is selected:
+
+- Set HTML lang="ar".
+- Set document dir="rtl".
+- Reverse navigation layout appropriately.
+- Adapt header and dropdown positions.
+- Align Arabic headings and paragraphs.
+- Adapt mobile navigation.
+- Reverse calculator stepper direction.
+- Adapt form labels and fields.
+- Adapt breadcrumbs.
+- Adapt testimonial cards.
+- Adapt footer columns.
+- Adapt dashboard layout.
+- Ensure both themes work correctly.
+
+Use CSS logical properties wherever possible.
+
+Do not apply a simplistic global reversal that breaks the interface.
+
+F. ARABIC TYPOGRAPHY
+
+Use a premium Arabic font such as:
+- Cairo.
+- Tajawal.
+- IBM Plex Sans Arabic.
+
+Ensure:
+- Proper Arabic line height.
+- Readable headings.
+- Good spacing.
+- Responsive typography.
+
+Keep international phone numbers, English company names, addresses, and OMR currency values readable.
+
+G. MULTILINGUAL SEO
+
+Implement:
+- Correct lang and dir attributes.
+- Language-specific page titles.
+- Arabic meta descriptions.
+- English meta descriptions.
+- Canonical URLs.
+- hreflang="en".
+- hreflang="ar".
+- x-default hreflang.
+- Language-aware sitemap entries.
+- Appropriate internal linking.
+
+Use correct translated page relationships and canonical URLs.
+
+==================================================
+8. COMPLETE MULTI-PAGE WEBSITE STRUCTURE
+==================================================
+
+Preserve the existing multi-page website and all existing routes.
+
+The website should contain:
+
+1. Home.
+2. About Us.
+3. Our Services.
+4. Residential Moving.
+5. Commercial Moving.
+6. International Moving.
+7. Office Relocation.
+8. Furniture Moving.
+9. Packing & Unpacking.
+10. Loading & Unloading.
+11. Transportation & Logistics.
+12. Moving Cost Calculator.
+13. Frequently Asked Questions.
+14. Our Process.
+15. Contact Us.
+16. Request a Free Quote.
+17. Testimonials.
+18. Privacy Policy.
+19. Terms & Conditions.
+
+Every page must have:
+- Unique content.
+- Responsive layout.
+- Appropriate SEO metadata.
+- Working internal links.
+- Light mode and dark mode.
+- English and Arabic translations.
+
+Do not turn the pages back into homepage sections.
+
+==================================================
+9. HOMEPAGE ENHANCEMENTS
+==================================================
+
+Preserve the existing cinematic hero design.
+
+Improve the homepage with:
+
+- Animated rotating hero headline.
+- Professional subtitle.
+- Request a Quote CTA.
+- Explore Services CTA.
+- Moving services overview.
+- Why Choose Us section.
+- Moving process preview.
+- Moving cost calculator preview.
+- Customer statistics.
+- Testimonials carousel.
+- FAQ preview.
+- Contact CTA.
+
+Display:
+
+2,067+ Customers in the Last 8 Months.
+
+Make this statistic configurable and publish it as a verified claim only after confirmation.
+
+==================================================
+10. INDIVIDUAL SERVICE PAGES
+==================================================
+
+Every moving service must have its own dedicated page.
+
+Each service page should include:
+
+- Cinematic hero.
+- Service introduction.
+- Benefits.
+- What's included.
+- How the service works.
+- Relevant images.
+- Service-specific FAQs.
+- Related services.
+- Request a Quote CTA.
+
+Do not duplicate identical generic content on every page.
+
+Never invent company certifications, insurance coverage, operational locations, awards, guarantees, or service availability.
+
+==================================================
+11. PREMIUM NAVIGATION SYSTEM
+==================================================
+
+Desktop navigation:
+
+- Home.
+- About.
+- Services dropdown.
+- Moving Cost Calculator.
+- Our Process.
+- Testimonials.
+- FAQ.
+- Contact.
+- Get a Quote CTA.
+
+Also include:
+- Light/Dark switcher.
+- English/Arabic language selector.
+
+Mobile navigation:
+- Responsive hamburger menu.
+- Elegant slide-in sidebar.
+- Expandable services submenu.
+- Theme switcher.
+- Language selector.
+- WhatsApp access.
+- Proper closing and navigation behavior.
+
+Maintain consistent navigation across every page.
+
+==================================================
+12. COMPANY CONTACT INFORMATION
+==================================================
+
+Official company name:
+ALI RAZA INTERNATIONAL TRADE SPS
+
+WhatsApp:
++968 9838 6824
+
+WhatsApp link:
+https://wa.me/96898386824
+
+Use the existing verified company contact details.
+
+Ensure contact forms and quotation forms use the existing working backend integration.
+
+Do not create fake form submission functionality.
+
+==================================================
+13. PREMIUM DESIGN & ANIMATION SYSTEM
+==================================================
+
+Maintain the existing brand direction:
+
+- Midnight navy.
+- Champagne gold.
+- Premium typography.
+- Cinematic backgrounds.
+- Elegant light theme.
+- Refined dark theme.
+- Smooth transitions.
+- Subtle animated lighting.
+- Professional moving and logistics imagery.
+- Shared truck, aircraft, and miniature-road animation system.
+
+Use shared reusable animations intelligently.
+
+Do not add heavy 3D animation to every section.
+
+Optimize for performance and mobile devices.
+
+==================================================
+14. SEO, SCHEMA & INDEXING
+==================================================
+
+Implement comprehensive SEO across all pages and languages.
+
+Include:
+- Unique page titles.
+- Meta descriptions.
+- Canonical URLs.
+- Open Graph tags.
+- Twitter card metadata.
+- Semantic HTML.
+- Breadcrumb navigation.
+- Internal linking.
+- Image alt attributes.
+- Organization schema.
+- LocalBusiness schema where appropriate.
+- Service schema where appropriate.
+- BreadcrumbList schema.
+- FAQPage schema for genuine visible FAQs.
+- WebSite schema.
+- WebPage schema.
+- Appropriate multilingual hreflang annotations.
+- XML sitemap.
+- robots.txt.
+
+For testimonials, only use review and aggregate rating structured data if genuine, eligible reviews and ratings are available.
+
+Include all canonical, indexable public pages in the sitemap.
+
+Do not include private admin pages in the public sitemap.
+
+Prepare the website for Google Search Console.
+
+Do not promise automatic Google indexing.
+
+==================================================
+15. GLOBAL FOOTER
+==================================================
+
+Create a premium multi-column footer across every page.
+
+Include:
+- Company introduction.
+- Quick links.
+- Moving services.
+- Customer support.
+- Moving Cost Calculator.
+- Testimonials.
+- FAQ.
+- Contact information.
+- WhatsApp link.
+- Privacy Policy.
+- Terms & Conditions.
+- Copyright information.
+
+The footer must support both languages, both themes, and RTL layout.
+
+==================================================
+16. TECHNICAL REQUIREMENTS
+==================================================
+
+Before implementing anything:
+
+1. Inspect the complete existing project.
+2. Identify the framework and routing architecture.
+3. Identify existing backend and database integrations.
+4. Identify the existing calculator implementation.
+5. Identify existing forms and email integrations.
+6. Identify existing theme system.
+7. Identify existing animations and reusable components.
+
+Then implement all upgrades using clean, reusable components.
+
+STRICT RULES:
+
+- Do not rebuild from scratch.
+- Do not delete existing pages.
+- Do not break existing routes.
+- Do not remove existing functionality.
+- Do not replace working integrations unnecessarily.
+- Do not expose admin credentials.
+- Do not create fake backend functionality.
+- Do not fabricate customer reviews.
+- Do not fabricate prices.
+- Do not fabricate company achievements.
+- Do not invent exchange rates.
+- Do not introduce unnecessary dependencies.
+- Maintain mobile responsiveness.
+- Maintain excellent loading speed.
+- Ensure direct URL access and refresh work.
+- Avoid console errors.
+- Maintain accessible navigation and controls.
+
+Create reusable components for:
+- Header.
+- Footer.
+- Theme switcher.
+- Language selector.
+- Hero headline animation.
+- WhatsApp floating button.
+- Service cards.
+- Breadcrumbs.
+- CTA sections.
+- FAQ accordion.
+- Testimonial cards.
+- Testimonial carousel.
+- Moving cost calculator.
+- Progress stepper.
+- Pricing configuration dashboard.
+- Quotation forms.
+- Multilingual layout.
+
+==================================================
+17. FINAL QUALITY ASSURANCE
+==================================================
+
+Before declaring the project complete, test every feature.
+
+THEME TESTING:
+- First-time visitors see Light Mode.
+- Manual theme selection works.
+- Theme persists after refresh.
+- Every page supports both themes.
+- No theme flicker.
+
+HERO TESTING:
+- Headline types automatically.
+- Headline erases correctly.
+- All phrases rotate infinitely.
+- No layout shifts.
+- Reduced-motion support works.
+
+WHATSAPP TESTING:
+- Floating button appears on every page.
+- Animation works.
+- Correct number opens.
+- Mobile placement works.
+
+TESTIMONIAL TESTING:
+- /testimonials works.
+- Carousel works.
+- Responsive layout works.
+- Genuine reviews only.
+- Customer statistic is configurable.
+
+ADMIN TESTING:
+- Authentication works.
+- Unauthorized access is blocked.
+- Prices can be edited.
+- Changes persist.
+- Draft and publish work.
+- Calculator receives updated published rates.
+- Customers cannot modify pricing.
+
+CALCULATOR TESTING:
+- All five steps work.
+- Progress stepper updates.
+- Previous steps remain editable.
+- Validation works.
+- Real configured prices are used.
+- Missing pricing displays custom quotation required.
+- Quote form receives all calculator information.
+
+LANGUAGE TESTING:
+- Arabic browser automatically opens Arabic.
+- English browser automatically opens English.
+- Unsupported languages default to English.
+- Manual selection works.
+- Manual selection persists.
+- Arabic is fully RTL.
+- All pages have Arabic translations.
+- Calculator works in Arabic.
+- Admin dashboard supports Arabic.
+- Light and dark themes work in Arabic.
+- Language switching works on mobile.
+
+SEO TESTING:
+- Every page has correct metadata.
+- Multilingual URLs work.
+- hreflang is correct.
+- Canonical URLs are correct.
+- Sitemap is updated.
+- robots.txt works.
+- Existing indexed routes remain compatible.
+
+==================================================
+18. FINAL DELIVERY
+==================================================
+
+Implement everything directly in the existing project.
+
+After completion, provide:
+
+1. Summary of all completed upgrades.
+2. List of pages created or modified.
+3. List of new components.
+4. Backend and database changes.
+5. Admin dashboard access instructions.
+6. How to configure moving prices.
+7. How to add genuine customer testimonials.
+8. How to update customer statistics.
+9. How language detection and manual selection work.
+10. Any remaining setup requirements or external credentials.
+
+Do not simply describe what needs to be done. Actually implement the requested changes in the existing codebase.
+
+FINAL OBJECTIVE:
+
+Transform ALI RAZA INTERNATIONAL TRADE SPS into a premium, international-standard, bilingual moving and logistics platform.
+
+The website must offer:
+
+- Beautiful Light and Dark Modes.
+- Automatic English and Arabic language detection.
+- Complete Arabic RTL support.
+- Animated cinematic hero headlines.
+- Animated WhatsApp contact button.
+- Dedicated testimonials page.
+- Verified customer statistics.
+- Secure administrator-controlled pricing.
+- Advanced moving cost calculator.
+- Visual multi-step progress indicator.
+- Real quotation integration.
+- Complete multi-page architecture.
+- Professional SEO and multilingual indexing.
+
+The finished website must feel like a high-end international logistics brand, not a generic template or basic landing page.
+
+PRIORITY: Preserve everything that already works while implementing all these upgrades professionally.

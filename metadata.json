@@ -1,0 +1,6 @@
+{
+  "name": "Vanguard Relocations",
+  "description": "Professional moving company website featuring an interactive booking system, instant quote calculator, and room inventory estimator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

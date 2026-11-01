@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Raza International Trade SPC | OAN Moving & Logistics Services (Muscat, Oman)</title>
+    <meta name="description" content="Ali Raza International Trade SPC (CR: 1481820, Tax ID: 1896320) - Premier house moving, corporate relocation, building materials trading, and logistics services across Muscat and Sultanate of Oman." />
+    <meta property="og:title" content="Ali Raza International Trade SPC | OAN Moving & Logistics" />
+    <meta property="og:description" content="CR: 1481820 | Registered in Muscat, Oman. House moving, building materials trading, waste treatment, and logistics." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('oan_theme');
+          if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          var savedLang = localStorage.getItem('oan_language');
+          if (!savedLang) {
+            var browserLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            if (browserLang.toLowerCase().startsWith('ar')) {
+              savedLang = 'ar';
+            } else {
+              savedLang = 'en';
+            }
+          }
+          document.documentElement.lang = savedLang;
+          document.documentElement.dir = (savedLang === 'ar') ? 'rtl' : 'ltr';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#070D1E] dark:text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950 transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
